@@ -1,0 +1,109 @@
+#top{
+  position: absolute;
+  width:100%; 
+  height: 60px;
+  top: 0px;
+  background: #4646CD;
+  box-shadow: 5px #fff;
+}
+
+#logo {
+  max-height: 55px;
+  left: 15px;
+  position: absolute;
+}
+
+#welcome {
+  color: #FFFFFF;
+}
+.filebox label { 
+  display: inline-block; 
+  padding: .5em .75em; 
+  color: #ffffff; 
+  font-size: 20px; 
+  line-height: normal; 
+  vertical-align: middle; 
+  background-color: #000033; 
+  cursor: pointer; border: 1px solid #cccccc; 
+  border-bottom-color: #cccccc; border-radius: .25em; 
+} 
+
+.instruction {
+  font-size: 20px;
+}
+  
+.filebox input[type="file"] { /* 파일 필드 숨기기 */ 
+  position: absolute; 
+  width: 1px; height: 1px; 
+  padding: 0; margin: -1px; 
+  overflow: hidden; 
+  clip:rect(0,0,0,0); 
+  border: 0; 
+}
+.hide {
+  display: none;
+}
+.page-loaded {
+  position: absolute;
+  top: 500px;
+  width: 700px;
+  height: 500px;
+  margin:-350px 0 0 -350px;
+  left:50%;
+  right:50%;
+  background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+  background-size: 600% 100%;
+  animation: gradient 7s linear infinite;
+  animation-direction: alternate;
+  overflow: hidden;
+  border: #000033 2px solid;
+}
+
+body {
+  background: #14005E;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+
+@keyframes sliding1 {
+  0% {top: 20%; left: 50%;}
+  33% {top: 80%; left: 84.5%;}
+  66% {top: 80%; left: 15%;}
+  100% {top: 20%; left: 50%;}
+}
+
+@keyframes sliding2 {
+  0% {top: 80%; left: 84.5%;}
+  33% {top: 80%; left: 15%;}
+  66% {top: 20%; left: 50%;}
+  100% {top: 80%; left: 84.5%;}
+}
+
+@keyframes sliding3 {
+  0% {top: 80%; left: 15%;}
+  33% {top: 20%; left: 50%;}
+  66% {top: 80%; left: 84.5%;}
+  100% {top: 80%; left: 15%;}
+}
+
+.glow {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
