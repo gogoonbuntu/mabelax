@@ -6,9 +6,11 @@ function LoadImage(input) {
 	if(upimg){
 		document.getElementById("screen").removeChild(upimg);
 	}
-
+	var fileurl;
   var reader = new FileReader();
   reader.onload = function (e) {
+		fileurl = e.target.result;
+		console.log(fileurl);
 		var w = window.innerWidth;
 		var elem = document.createElement("img");
 		elem.setAttribute("src", e.target.result);
@@ -26,6 +28,7 @@ function LoadImage(input) {
   reader.readAsDataURL(input.files[0]);
   $("#screen-text").text("processing...");
 	workhard();
+	$("#form1").submit();
 }
 
 function workhard() {
