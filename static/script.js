@@ -23,12 +23,26 @@ function LoadImage(input) {
 		elem.setAttribute("alt", "Flower");
 		elem.setAttribute("id", "upimg");
 		document.getElementById("screen").appendChild(elem);
-		
   }
   reader.readAsDataURL(input.files[0]);
   $("#screen-text").text("processing...");
 	workhard();
-	$("#form1").submit();
+	$('#form1' ).submit(
+    function( e ) {
+        $.ajax( {
+            url: '/upload',
+            type: 'POST',
+            data: new FormData( this ),
+            processData: false,
+            contentType: false,
+            success: function(result){
+                console.log(result);
+                //$("#div1").html(str);
+            }
+        } );
+        e.preventDefault();
+    } 
+);
 }
 
 function workhard() {
