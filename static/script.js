@@ -11,6 +11,7 @@ function LoadImage(input) {
   var reader = new FileReader();
   reader.onload = function (e) {
 		fileurl = e.target.url;
+		console.log(fileurl);
 		var w = window.innerWidth;
 		var elem = document.createElement("img");
 		elem.setAttribute("src", fileurl);
@@ -45,5 +46,5 @@ function worknorm() {
 
 function upload(){
 	//el("form1").target = el("my_iframe");
-	el("form1").submit();
+	//el("form1").submit();
 }
