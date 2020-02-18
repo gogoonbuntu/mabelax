@@ -25,9 +25,17 @@ function LoadImage(input) {
   }
   reader.readAsDataURL(input.files[0]);
   $("#screen-text").text("processing...");
-	$("#g1").removeClass("g1slow").addClass("g1fast").;
-	$("#g2").removeClass("g2slow").addClass("g2fast");
-	$("#g3").removeClass("g3slow").addClass("g3fast");
-	$("#g1").attr('fill', '#e70000')
-  $(".filebox").addClass("hide");
+	workhard();
+}
+
+function workhard() {
+	$("#g1").removeClass("g1slow").addClass("g1fast").attr('fill', '#df0000');
+	$("#g2").removeClass("g2slow").addClass("g2fast").attr('fill', '#e70000');
+	$("#g3").removeClass("g3slow").addClass("g3fast").attr('fill', '#ff0000');
+}
+
+function worknorm() {
+	$("#g1").addClass("g1slow").removeClass("g1fast").attr('fill', '#3D0000');
+	$("#g2").addClass("g2slow").removeClass("g2fast").attr('fill', '#5E0000');
+	$("#g3").addClass("g3slow").removeClass("g3fast").attr('fill', '#890000');
 }

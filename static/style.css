@@ -75,17 +75,17 @@ h1 {
 }
 
 .g1fast {
-	animation: rotation 3s linear infinite;
+	animation: rotation1 2.5s linear infinite;
 }
 .g2fast {
 	animation: rotation 2s linear infinite;
 }
 .g3fast {
-	animation: rotation 1s linear infinite;
+	animation: rotation 1.5s linear infinite;
 }
 
 .g1slow {
-	animation: rotation 25s linear infinite;
+	animation: rotation1 25s linear infinite;
 }
 .g2slow {
 	animation: rotation 20s linear infinite;
