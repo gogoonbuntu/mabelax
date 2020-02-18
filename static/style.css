@@ -5,9 +5,11 @@
 
 #wrapper {
 	background: #EFDFB6;
-	width: 1000px;
+	max-width: 1000px;
 	height: 100%;
 	margin: auto;
+	position: relative;
+	overflow: hidden;
 }
 
 body {
@@ -49,33 +51,47 @@ h1 {
 }
 
 #logo {
-	position: relative;
-	right: 0px;
+	position: absolute;
 	bottom: 0px;
+	right: 0px;	
 	z-index: 5;
 	color: #FFF;
 }
 
 #g1 {
-	position: absolute;
-	right: 230px;
-	top: 30px;
+	float: right;
 	z-index: 3;
-	animation: rotation 25s linear infinite;
 }
 #g2 {
-	position: absolute;
-	right: 470px;
-	top: 20px;
+	float: right;
 	z-index: 2;
-	animation: rotation1 20s linear infinite;
 }
 #g3 {
-	position: absolute;
-	right: 320px;
-	top: 250px;
+	margin-right: 40px;
+	clear: both;
+	float: right;
+	right: 5px;
 	z-index: 1;
-	animation: rotation1 15s linear infinite;
+}
+
+.g1fast {
+	animation: rotation 3s linear infinite;
+}
+.g2fast {
+	animation: rotation 2s linear infinite;
+}
+.g3fast {
+	animation: rotation 1s linear infinite;
+}
+
+.g1slow {
+	animation: rotation 25s linear infinite;
+}
+.g2slow {
+	animation: rotation 20s linear infinite;
+}
+.g3slow {
+	animation: rotation 15s linear infinite;
 }
 
 @keyframes rotation {
@@ -96,19 +112,16 @@ h1 {
 		}
 }
 
-#welcome {
-  fill: #27DBB1
-}
 
 .hide {
   display: none;
 }
 #screen {
   position: fixed;
-  top: 60%;
-	left:50%;
   width: 400px;
   height: 250px;
+	top: 60%;
+	left:50%;
   transform:translate(-50%, -50%);
 	text-align: center;
 	display: table;
@@ -121,6 +134,7 @@ h1 {
 }
 
 #screen-text {
+	border: transparent;
 	color: #FFF;
 	font-size: 1.2em;
 	display: table-cell;
@@ -190,4 +204,41 @@ input[type="file"] {
 	clip:rect(0,0,0,0);
 	border:0; 
 	z-index: 5;
+}
+
+@media(max-width: 420px){
+	#wrapper {
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 40px;
+		margin-left: 10px;
+	}
+
+	#screen {
+		width: 200px;
+		height: 180px;
+	}
+
+	#title {
+	transform: translateX(3px) translateY(3px);
+}
+
+	#expl {
+		line-height: 1.2;
+		font-size: 12pt;
+		margin-right: 10px;
+	}
+
+	#logo {
+		margin-bottom: 50px;
+	}
+
+	#g2 {
+		clear: both;
+	}
+}
+#uploadBtn {
+	display: none;
 }
